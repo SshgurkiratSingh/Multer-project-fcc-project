@@ -31,7 +31,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <div>
            
-            <div class="text-xs"> <%= typeof msg != 'undefined' ? msg :'Welcome New Visitor' %></div>
+            <div class="text-xs"> <h2><%= typeof msg != 'undefined' ? msg :'Welcome New Visitor' %></div></h2>
           </div>
         </div>
       </div>
@@ -40,10 +40,15 @@
 
 <div class="container" style="margin-top:100px">
     <form  method="POST" action="/upload" enctype="multipart/form-data">
-        <input type="file" class="file-input file-input-bordered w-full max-w-xs" name="myImage"/><br/>
+        <input type="file" class="file-input file-input-bordered w-full max-w-xs" name="myImage" required="true"/><br/>
         <input id="button" type="submit" value="Upload" class="btn btn-outline">
     </form>
-    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <img class="rounded" src="<%= typeof file != 'undefined' ? file :'Welcome New Visitor' %>"/>
     </div>
 </center>
 </body>
