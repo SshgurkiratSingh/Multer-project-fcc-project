@@ -2,7 +2,7 @@ const express = require('express')
 const ejs = require('ejs')
 const path = require('path')
 const app = express()
-const port = 80
+const port = process.env.PORT || 80
 const multer =require('multer')
 const { getFips } = require('crypto')
 //set storage engine
